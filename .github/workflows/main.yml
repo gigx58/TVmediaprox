@@ -47,5 +47,8 @@ jobs:
           git add .
           git commit -m "UPDATE" || echo "Nessuna modifica da commitare"
 
+      - name: Autenticazione push
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
       - name: Pusha il cambiamento
         run: git push
