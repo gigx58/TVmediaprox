@@ -294,7 +294,7 @@ def eventi_m3u8_generator():
     
                         for channel in event["channels"]:
                             m3u8_content += f"#EXTINF:-1 tvg-id=\"{channel['channel_id']}\" tvg-name=\"{tvg_name}\" group-title=\"Eventi\" tvg-logo=\"\", {tvg_name}\n"
-                            m3u8_content += f"https://gigx58-mazztvmediaprox.hf.space/proxy/hls/manifest.m3u8?API_PASSWORD=test58&d={channel['stream_url']}&h_user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36&h_referer=https://ilovetoplay.xyz/&h_origin=https://ilovetoplay.xyz\n"
+                            m3u8_content += f"https://gigx58-mazztvmediaprox.hf.space/proxy/hls/manifest.m3u8?API_PASSWORD=58&d={channel['stream_url']}&h_user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36&h_referer=https://ilovetoplay.xyz/&h_origin=https://ilovetoplay.xyz\n"
     
         return m3u8_content
     
@@ -733,7 +733,7 @@ def vavoo_italy_channels():
                     tvg_id = channel_id_map.get(normalized_name, "")
                     tvg_logo = logos_dict.get(tvg_name_cleaned.lower(), DEFAULT_TVG_ICON)
                     f.write(f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{tvg_name_cleaned}" tvg-logo="{tvg_logo}" group-title="{category}", {name}\n')
-                    f.write(f"https://gigx58-mazztvmediaprox.hf.space/proxy/hls/manifest.m3u8?API_PASSWORD=test58&d={url}\n\n")
+                    f.write(f"https://gigx58-mazztvmediaprox.hf.space/proxy/hls/manifest.m3u8?API_PASSWORD=58&d={url}\n\n")
     
     def main():
         epg_root = fetch_epg(EPG_FILE)
